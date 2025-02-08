@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDD - Développement Durable | IMT Atlantique</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegación Global -->
+    <nav class="global-nav">
+        <a href="index.html">
+            <img src="imagenes/Logo_IMT_Atlantique.png" alt="Logo IMT" style="height: 100px;">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="bde.html">BDE</a>
+            <a href="bda.html">BDA</a>
+            <a href="bds.html">BDS</a>
+            <a href="bdd.html">BDD</a>
+            <a href="bdi.html">BDI</a>
+        </div>
+    </nav>
+
+    <!-- Header BDD -->
+    <header class="bureau-header">
+        <h1>BDD <span>Bureau de Développement Durable</span></h1>
+    </header>
+
+    <!-- Section Équipe -->
+    <section class="team-section">
+        <h2 class="section-title">Notre Équipe Engagée</h2>
+        <div class="member-grid">
+            <div class="member-card">
+                <img src="imagenes/sarah.jpg" alt="Sarah" class="member-photo">
+                <h3>Sarah</h3>
+                <p>Présidente</p>
+            </div>
+            <div class="member-card">
+                <img src="imagenes/pascal.jpg" alt="Pascal" class="member-photo">
+                <h3>Pascal</h3>
+                <p>Vice-Président</p>
+            </div>
+            <div class="member-card">
+                <img src="imagenes/lilia.jpg" alt="Lilia" class="member-photo">
+                <h3>Lilia</h3>
+                <p>Secrétaire</p>
+            </div>
+            <div class="member-card">
+                <img src="imagenes/ethan.jpg" alt="Ethan" class="member-photo">
+                <h3>Ethan</h3>
+                <p>Trésorier</p>
+            </div>
+            <div class="member-card">
+                <img src="imagenes/uribel.jpg" alt="Uribel" class="member-photo">
+                <h3>Uribel</h3>
+                <p>Vice-Trésorier</p>
+            </div>
+            <div class="member-card">
+                <img src="imagenes/axel.jpg" alt="Axel" class="member-photo">
+                <h3>Axel</h3>
+                <p>Respo Vélo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section class="projects-section">
+        <h2 class="section-title">Nos Projets Écologiques</h2>
+        <div class="project-accordion">
+            <div class="project-item">
+                <div class="project-header">Paniers</div>
+                <div class="project-content">
+                    <div class="project-content-inner">
+                        <p>Ajouter description des paniers...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">Poubelle capsule de café</div>
+                <div class="project-content">
+                    <div class="project-content-inner">
+                        <p>Ajouter description du projet...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">Saint Valentin</div>
+                <div class="project-content">
+                    <div class="project-content-inner">
+                        <p>Ajouter description du projet...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">Club couture</div>
+                <div class="project-content">
+                    <div class="project-content-inner">
+                        <p>Ajouter description du projet...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">Vélo</div>
+                <div class="project-content">
+                    <div class="project-content-inner">
+                        <p>Ajouter description du projet...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Événements -->
+    <section class="events-section">
+        <h2 class="section-title">Événements à Venir</h2>
+        <div class="events-timeline">
+            <div class="timeline-item">
+                <h3>Ajouter événements</h3>
+                <p>Day Month Year | Campus Principal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón Regreso -->
+    <a href="#" class="back-to-top">↑</a>
+<script>
+    // Función para manejar la expansión/colapso de los proyectos
+    	document.addEventListener('DOMContentLoaded', () => {
+        	const projectHeaders = document.querySelectorAll('.project-header');
+
+        	projectHeaders.forEach(header => {
+            		header.addEventListener('click', () => {
+                		const content = header.nextElementSibling; // Obtiene el .project-content
+                		const isActive = content.classList.contains('active');
+
+                		// Cierra todos los proyectos antes de abrir uno nuevo
+                		document.querySelectorAll('.project-content').forEach(item => {
+                    			item.classList.remove('active');
+                   	 		item.style.maxHeight = null;
+                		});
+
+                		// Si el proyecto no está activo, lo abre
+                		if (!isActive) {
+                    			content.classList.add('active');
+                    			content.style.maxHeight = content.scrollHeight + 'px';
+                		}
+           		 });
+        	});
+    	});
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bureaux IMT Atlantique</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Barra de Navegación Global -->
+    <nav class="global-nav">
+        <a href="index.html">
+            <img src="imagenes/Logo_IMT_Atlantique.png" alt="Logo IMT" style="height: 100px;">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="bde.html">BDE</a>
+            <a href="bda.html">BDA</a>
+            <a href="bds.html">BDS</a>
+            <a href="bdd.html">BDD</a>
+            <a href="bdi.html">BDI</a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-delay="200">Bienvenue aux Bureaux de l'IMT Atlantique</h1>
+            <p data-aos="fade-up" data-aos-delay="400">Découvrez toutes nos activités et événements</p>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Tarjetas de Bureaus -->
+    <div class="grid-bureaus">
+        <!-- BDE Card -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/icono-bde.png" alt="BDE" class="card-icon">
+                    <h3>Bureau des Élèves</h3>
+                </div>
+                <div class="card-back">
+                    <p>Organisation des événements étudiants et vie de campus</p>
+                    <a href="bde.html" class="boton">
+                        <span>Découvrir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BDA Card -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/icono-bda.png" alt="BDA" class="card-icon">
+                    <h3>Bureau des Arts</h3>
+                </div>
+                <div class="card-back">
+                    <p>Promotion des activités artistiques et culturelles</p>
+                    <a href="bda.html" class="boton">
+                        <span>Découvrir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BDS Card -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/icono-bds.png" alt="BDS" class="card-icon">
+                    <h3>Bureau des Sports</h3>
+                </div>
+                <div class="card-back">
+                    <p>Encouragement des activités sportives et compétitions</p>
+                    <a href="bds.html" class="boton">
+                        <span>Découvrir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BDD Card -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="800">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/icono-bdd.png" alt="BDD" class="card-icon">
+                    <h3>Bureau de Développement Durable</h3>
+                </div>
+                <div class="card-back">
+                    <p>Projets écologiques et initiatives durables</p>
+                    <a href="bdd.html" class="boton">
+                        <span>Découvrir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BDI Card -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="1000">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/icono-bdi.png" alt="BDI" class="card-icon">
+                    <h3>Bureau des Internationaux</h3>
+                </div>
+                <div class="card-back">
+                    <p>Soutien aux étudiants internationaux et échanges culturels</p>
+                    <a href="bdi.html" class="boton">
+                        <span>Découvrir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        // Preloader
+        window.addEventListener('load', () => {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
